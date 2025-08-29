@@ -1,2 +1,11 @@
 # My-Assignment---05
-I've given the following HTML + CSS + Javascript coded files down below, Sir. Also along with a readme file as well.
+I've given the following HTML + CSS + Javascript coded files down below, Sir. Also along with a readme file as well. The answers are given below from **my** understanding as instructed.
+1. **getElementById():** Selects a single element based on its unique id attribute.
+**getElementsByClassName():** Selects all elements that have the specified "className" attribute.
+**querySelector():** Selects the **first** element that matches a given "CSS selector".
+and **querySelectorAll():** Selects **all** elements instead that match the given "CSS selector".
+2. The "document.createElement()" method is used to create a new HTML element in the DOM. but inserting has several ways. "appendChild()" method is used to insert a new element as the **last** child of a specific parent element. "insertBefore()" is used to insert a new element, **before** the specific reference child within the parent element. "prepend()" is used to insert the new element as the **first** child of the specified parent element. and after() and before() methods can be used on an already **existing** element to insert a new element immediately within **after** or **before** it.
+3. Event bubbling is a **browser mechanism** in web development where an event, such as a click or a key press, starts at the target element and "bubbles up" through its ancestors like: it's parents, grandparents, etc. in the DOM tree to the root.
+4. **Event Delegation in Javascript:** Event delegation in JavaScript is a technique for handling events on multiple child elements by attaching a single event listener to their common parent element. **why is it required:** it has improved performance and memory efficiency, because due to this, only **one** listener is needed on the parent instead of having to attach individual event listeners to potentially **hundreds or thousands** of child elements instead. Event delegation can also **automatically** handle events for elements that are added to the DOM after the initial page load. and It can **centralize** event handling logic, making the code easier to understand, manage, and to debug as well.
+5. preventDefault(): it addresses the **default** browser behavior of an element.
+and about stopPropagation(): it actually addresses the flow of the event through the **DOM hierarchy** instead.
