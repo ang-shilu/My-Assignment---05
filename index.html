@@ -1,0 +1,259 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emergency Service Directory</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header class="header">
+<div class="header-left">
+  <img src="assets/logo.png" alt="logo" class="logo-img" />
+  <div class="header-text">
+    <span>Emergency</span>
+    <span>Service</span>
+  </div>
+</div>
+
+<div class="header-right">
+<button class="header-btn heart" id="heart-btn">
+  <img src="assets/heart.png" alt="heart" />
+  <span id="score-count">0</span>
+</button>
+
+<button class="header-btn score">
+  <img src="assets/coin.png" alt="coin" />
+  <span>100</span>
+</button>
+
+<button class="header-btn service-btn btn-copy-service">0 Copy</button>
+</div>
+</header>
+
+<section class="hero">
+  <div class="hero-logo">
+    <img src="assets/logo-dark.png" alt="govt logo" />
+  </div>
+  <h1>Emergency Service Directory</h1>
+  <p>Government Emergency Services at Your Fingertip – A Project by Government of the People's Republic of Bangladesh</p>
+</section>
+
+<main class="main">
+  <div class="service-cards-container">
+
+    <div class="service-card">
+      <div class="service-icon-wrapper">
+        <div class="service-icon">
+          <img src="assets/emergency.png" alt="icon"/>
+        </div>
+        <div class="service-heart-icon">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <div class="service-name">National Emergency Number</div>
+      <div class="service-category">National Emergency</div>
+      <div class="service-number">999</div>
+      <div class="service-all">All</div>
+      <div class="service-buttons">
+        <button class="service-btn btn-copy-service"><img src="assets/copy.png" alt="Copy"/>Copy</button>
+        <button class="service-btn btn-call" onclick="handleCall(this)">
+          <img src="assets/call.png" alt="Call" />
+          Call
+        </button>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon-wrapper">
+        <div class="service-icon">
+          <img src="assets/police.png" alt="icon"/>
+        </div>
+        <div class="service-heart-icon">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <div class="service-name">Police Helpline Number</div>
+      <div class="service-category">Police</div>
+      <div class="service-number">999</div>
+      <div class="service-all">Police</div>
+      <div class="service-buttons">
+        <button class="service-btn btn-copy-service"><img src="assets/copy.png" alt="Copy"/>Copy</button>
+        <button class="service-btn btn-call" onclick="handleCall(this)">
+          <img src="assets/call.png" alt="Call" />
+          Call
+        </button>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon-wrapper">
+        <div class="service-icon">
+          <img src="assets/fire-service.png" alt="icon"/>
+        </div>
+        <div class="service-heart-icon">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <div class="service-name">Fire Service Number</div>
+      <div class="service-category">Fire Service</div>
+      <div class="service-number">999</div>
+      <div class="service-all">Fire</div>
+      <div class="service-buttons">
+        <button class="service-btn btn-copy-service"><img src="assets/copy.png" alt="Copy"/>Copy</button>
+        <button class="service-btn btn-call" onclick="handleCall(this)">
+          <img src="assets/call.png" alt="Call" />
+          Call
+        </button>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon-wrapper">
+        <div class="service-icon">
+          <img src="assets/ambulance.png" alt="icon"/>
+        </div>
+        <div class="service-heart-icon">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <div class="service-name">Ambulance Service</div>
+      <div class="service-category">Ambulance</div>
+      <div class="service-number">1994-999999</div>
+      <div class="service-all">Health</div>
+      <div class="service-buttons">
+        <button class="service-btn btn-copy-service"><img src="assets/copy.png" alt="Copy"/>Copy</button>
+        <button class="service-btn btn-call" onclick="handleCall(this)">
+          <img src="assets/call.png" alt="Call" />
+          Call
+        </button>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon-wrapper">
+        <div class="service-icon">
+          <img src="assets/emergency.png" alt="icon"/>
+        </div>
+        <div class="service-heart-icon">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <div class="service-name">Women and Child Helpline</div>
+      <div class="service-category">Women and Child Helpline</div>
+      <div class="service-number">109</div>
+      <div class="service-all">Help</div>
+      <div class="service-buttons">
+        <button class="service-btn btn-copy-service"><img src="assets/copy.png" alt="Copy"/>Copy</button>
+        <button class="service-btn btn-call" onclick="handleCall(this)">
+          <img src="assets/call.png" alt="Call" />
+          Call
+        </button>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon-wrapper">
+        <div class="service-icon">
+          <img src="assets/police.png" alt="icon"/>
+        </div>
+        <div class="service-heart-icon">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <div class="service-name">Anti-Corruption Helpline</div>
+      <div class="service-category">Anti-Corruption</div>
+      <div class="service-number">106</div>
+      <div class="service-all">Govt.</div>
+      <div class="service-buttons">
+        <button class="service-btn btn-copy-service"><img src="assets/copy.png" alt="Copy"/>Copy</button>
+        <button class="service-btn btn-call" onclick="handleCall(this)">
+          <img src="assets/call.png" alt="Call" />
+          Call
+        </button>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon-wrapper">
+        <div class="service-icon">
+          <img src="assets/emergency.png" alt="icon"/>
+        </div>
+        <div class="service-heart-icon">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <div class="service-name">Electricity Helpline</div>
+      <div class="service-category">Electricity</div>
+      <div class="service-number">16216</div>
+      <div class="service-all">Electricity</div>
+      <div class="service-buttons">
+        <button class="service-btn btn-copy-service"><img src="assets/copy.png" alt="Copy"/>Copy</button>
+        <button class="service-btn btn-call" onclick="handleCall(this)">
+          <img src="assets/call.png" alt="Call" />
+          Call
+        </button>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon-wrapper">
+        <div class="service-icon">
+          <img src="assets/brac.png" alt="icon"/>
+        </div>
+        <div class="service-heart-icon">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <div class="service-name">Brac Helpline</div>
+      <div class="service-category">Brac</div>
+      <div class="service-number">16445</div>
+      <div class="service-all">NGO</div>
+      <div class="service-buttons">
+        <button class="service-btn btn-copy-service"><img src="assets/copy.png" alt="Copy"/>Copy</button>
+        <button class="service-btn btn-call" onclick="handleCall(this)">
+          <img src="assets/call.png" alt="Call" />
+          Call
+        </button>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon-wrapper">
+        <div class="service-icon">
+          <img src="assets/Bangladesh-Railway.png" alt="icon"/>
+        </div>
+        <div class="service-heart-icon">
+          <i class="far fa-heart"></i>
+        </div>
+      </div>
+      <div class="service-name">Bangladesh Railway Helpline</div>
+      <div class="service-category">Bangladesh Railway</div>
+      <div class="service-number">163</div>
+      <div class="service-all">Travel</div>
+      <div class="service-buttons">
+        <button class="service-btn btn-copy-service"><img src="assets/copy.png" alt="Copy"/>Copy</button>
+        <button class="service-btn btn-call" onclick="handleCall(this)">
+          <img src="assets/call.png" alt="Call" />
+          Call
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <aside class="history">
+    <div class="history-header">
+      <div class="history-title">
+        <img src="assets/clock.png" alt="history icon" />
+        <span>Call History</span>
+      </div>
+      <button class="clear-btn">Clear</button>
+    </div>
+    <ul class="history-list"></ul>
+  </aside>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
